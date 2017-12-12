@@ -33,4 +33,5 @@ print("This programm took " .. os.clock()/60 .. " Minutes for execution.")
 -- Solution: 232792560 (correct)
 -- This programm needed approx. 4 minutes for runtime on an i7-Lenovo-Thinkpad with
 -- Update: this program now needs approx. 1.6 minutes for running on the same system (repeat until instead of for)
+-- Update 2: with a while-loop it would have taken slightly longer (1.7 minutes). Tried it out just for fun.
 	
