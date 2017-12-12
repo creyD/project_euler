@@ -9,11 +9,15 @@ print("Search started...")
 repeat
 	-- print(number) excluded because of performance
 	counter = 0
-	for i=1, 20 do
-		if (number % i == 0) then
+	i = 1
+	repeat
+		if (number % i ~= 0) then
+			break
+		else
 			counter = counter + 1
 		end
-	end
+		i = i + 1
+	until i > 20
 	if (counter == 20) then
 		hit = true
 	end
@@ -28,7 +32,5 @@ print("This programm took " .. os.clock()/60 .. " Minutes for execution.")
 
 -- Solution: 232792560 (correct)
 -- This programm needed approx. 4 minutes for runtime on an i7-Lenovo-Thinkpad with
-
--- Ideas:
-	-- Abort the check if one of the 20 isn´t modulo = 0
+-- Update: this program now needs approx. 1.6 minutes for running on the same system (repeat until instead of for)
 	
