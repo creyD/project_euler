@@ -8,7 +8,7 @@ This is just a simple storage for ideas and solutions for different problems of 
 Task | creyD (Lua) | Katzenspucker (PHP)
 ------------ | ------------- | -------------
 Problem 1 | :white_check_mark: | :x:
-Problem 2 | :white_check_mark: | :x:
+Problem 2 | :white_check_mark: | :white_check_mark:
 Problem 3 | :x: | :x:
 Problem 4 | :x: | :x:
 Problem 5 | :x: | :x:
