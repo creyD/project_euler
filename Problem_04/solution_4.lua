@@ -19,11 +19,41 @@ function getLargestPalindrom(border)
 	return border
 end
 
+-- Check if the number can be divided by any 3 digid number
+function checkNumber(number)
+	hits = {}
+	for i=100, 999 do
+		if (number % i == 0) then
+			table.insert(hits, i)
+		end
+	end
+	for f=1, #hits do
+		x = number / hit[i]
+		if (string.len(tostring(x)) == 3) then
+			return x
+		end
+	end
+	return false
+end
+
 -- Get the largest possible product of three digid numbers
-searchedNumber = 999 * 999
-searchedNumber = getLargestPalindrom(searchedNumber)
+c = 999 * 999
+c = getLargestPalindrom(c)
+
+a = checkNumber(c)
+
+if (a == false) then
+	print("Yo")
+else
+	i = c / a
+	print(i .. a .. c)
+end
+
+
+
+-- if it is divided with % 0 at any three digid number, just trace it back
 
 -- rangeA = 100 - 999
 -- rangeB = 100 - 999
-print("The largest palindrom of three digit numbers is " .. searchedNumber)
+print("The largest palindrom of three digit numbers is " .. c)
 
