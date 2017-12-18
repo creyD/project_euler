@@ -56,5 +56,5 @@ while checkerGlob == true do
 end
 
 print("The largest palindrom of three digit numbers is " .. c .. "\nIt is the product of " .. c / a .. " times " .. a)
-
+print("This programm took " .. os.clock() .. " seconds (" .. os.clock()/60 .. " minutes) for execution.")
 -- Solution: 906609 (correct)

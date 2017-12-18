@@ -28,7 +28,7 @@ repeat
 until hit==true
 
 print("Search completed. The number you are looking for is: " .. number)
-print("This programm took " .. os.clock()/60 .. " Minutes for execution.")
+print("This programm took " .. os.clock() .. " seconds (" .. os.clock()/60 .. " minutes) for execution.")
 
 -- Solution: 232792560 (correct)
 -- This programm needed approx. 4 minutes for runtime on an i7-Lenovo-Thinkpad with
