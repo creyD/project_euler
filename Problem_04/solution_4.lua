@@ -1,3 +1,8 @@
+-- Project Euler Problem 4
+-- Task: A palindromic number reads the same both ways. The largest palindrome made from the product of two 2-digit numbers is 9009 = 91 × 99.
+-- Find the largest palindrome made from the product of two 3-digit numbers.
+
+-- Check if a number is a palindrome or not
 function checkPalindrome(number)
 	numberReversed = tonumber(string.reverse(tostring(number)))
 	if (number == numberReversed) then
@@ -6,8 +11,8 @@ function checkPalindrome(number)
 	return false
 end
 
+-- Get the largest palindrom counting down from a given border
 function getLargestPalindrom(border)
-	-- Find the largest possible palindrom from a given border
 	checker = true
 	while (checker == true) do
 		if (checkPalindrome(border)) then 
@@ -19,7 +24,7 @@ function getLargestPalindrom(border)
 	return border
 end
 
--- Check if the number can be divided by any 3 digid number
+-- Check if the number is the product of two 3-digid numbers
 function checkNumber(number)
 	hits = {}
 	for i=100, 999 do
@@ -28,32 +33,28 @@ function checkNumber(number)
 		end
 	end
 	for f=1, #hits do
-		x = number / hit[i]
-		if (string.len(tostring(x)) == 3) then
-			return x
+		factor2 = number / hits[f]
+		if (string.len(tostring(factor2)) == 3) then
+			return factor2
 		end
 	end
 	return false
 end
 
--- Get the largest possible product of three digid numbers
-c = 999 * 999
-c = getLargestPalindrom(c)
+-- START
+c = 999 * 999 -- Starting with the largest possible product of any 3-digid numbers
+checkerGlob = true
 
-a = checkNumber(c)
-
-if (a == false) then
-	print("Yo")
-else
-	i = c / a
-	print(i .. a .. c)
+while checkerGlob == true do
+	c = getLargestPalindrom(c)
+	a = checkNumber(c)
+	if (not a == false) then
+		checkerGlob = false
+	else
+		c = c - 1
+	end
 end
 
+print("The largest palindrom of three digit numbers is " .. c .. "\nIt is the product of " .. c / a .. " times " .. a)
 
-
--- if it is divided with % 0 at any three digid number, just trace it back
-
--- rangeA = 100 - 999
--- rangeB = 100 - 999
-print("The largest palindrom of three digit numbers is " .. c)
-
+-- Solution: 906609 (correct)
