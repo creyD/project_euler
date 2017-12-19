@@ -16,7 +16,7 @@ Problem 6 | :white_check_mark: | :x:
 Problem 7 | :white_check_mark: | :x:
 Problem 8 | :x: | :x:
 Problem 9 | :x: | :x:
-Problem 10 | :x: | :x:
+Problem 10 | :white_check_mark: | :x:
 Problem 16 | :white_check_mark: | :x:
 
 
