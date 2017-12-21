@@ -1,11 +1,14 @@
-path = "***REMOVED***"
+-- Project Euler Problem 13
+-- Task: https://projecteuler.net/problem=13
 
-file = io.open(path, "r")
+path = "PATH"
+
+file = io.open(path, "r") -- Open given file in read mode
 io.input(file)
-string = ""
-for line in io.lines(path) do
-	string = string .. line
+sum = 0
+for line in io.lines(path) do -- For each line add the number to the sum
+	sum = sum + line
 end
+print(sum)
 
-print(string)
-
+-- Solution: 5537376230 (correct)

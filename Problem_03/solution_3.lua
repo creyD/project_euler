@@ -15,7 +15,7 @@ end
 
 function getPrimeArray(border)
 	array = {}
-	-- file = io.open("***REMOVED***", "w+")
+	-- file = io.open("PATH", "w+")
 	-- io.output(file)
 	for i=2, border do
 		if (isPrime(i)) then
@@ -26,7 +26,7 @@ function getPrimeArray(border)
 	-- io.close(file)
 	return array
 end
-path = "***REMOVED***"
+path = "PATH"
 print("Program started...")
 bigNumber = 600851475143
 factorArray = {}
