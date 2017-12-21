@@ -65,7 +65,7 @@ function getRowHorizontal(table)
 	return highVal
 end
 
--- Maximum is 484 77312
+-- Maximum is 48477312
 function getAllHorizontal(table)
 	highestOfEmAll = 0
 	for k,v in pairs(table) do
@@ -95,32 +95,27 @@ function createVerticalTable(inputTable)
 	return newTable
 end
 
--- Maximum is 32565456
+-- Maximum is PENDING
 function getAllDiagonal(table)
-	newTable = createDiagonalTables(table)
+	newTable = getDiagonalsRight(table)
 	return getAllHorizontal(newTable)
 end
 
-function createDiagonalTables(inputTable)
-	newTable = {}
-	for y=0, 19 do
-		for r=0, 19 do
-			nini = {}
-			for n,k in pairs(inputTable) do
-				if (k[n+r] ~= nil) then
-					table.insert(nini, k[n + r])
-				end
+function getDiagonalsRight(inputTable)
+	highest = 0
+	for y = 2, 17 do
+		for m = 0, 16 do
+			product = inputTable[y][m+1]
+			for i=2, 4 do
+				product = product * inputTable[i-1][i+m]
 			end
-			table.insert(newTable, nini)
+			if product > highest then
+				highest = product
+			end
 		end
 	end
-	checkedTable = {}
-	for n, k in pairs(newTable) do
-		if (#k > 4) then
-			table.insert(checkedTable, k)
-		end
-	end
-	return checkedTable
+	print(highest)
+	return highest
 end
 
 function main(table)
@@ -134,10 +129,10 @@ function main(table)
 	return highestVal
 end
 
-print(getAllDiagonal(bigTable))
---print(main(bigTable))
+print("Ergebnis: " .. getDiagonalsRight(bigTable))
+-- print(main(bigTable))
 
 --[[
 	Notes:
-		- Not functional because of createDiagonalTables
+		- Not functional because of getDiagonalsRight
 ]]--
