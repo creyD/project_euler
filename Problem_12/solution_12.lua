@@ -31,5 +31,5 @@ until finished
 print("The first triangle number with over five hundred divisors is " .. currentNumber)
 print("This programm took " .. os.clock() .. " seconds (" .. os.clock()/60 .. " minutes) for execution.")
 
--- Solution: PENDING
--- Runtime: PENDING
+-- Solution: 76576500 (correct)
+-- Runtime: 269.40691666667 minutes (Yes that is very long...)
