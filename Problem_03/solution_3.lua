@@ -30,4 +30,4 @@ print("The largest prime factor of " .. bigNumber .. " is " .. largestFactor)
 print("This programm took " .. os.clock() .. " seconds (" .. os.clock()/60 .. " minutes) for execution.")
 
 -- Solution: 6857 (correct)
--- Script found the solution after a few seconds but checked numbers long time after that... (Overall runtime: )
+-- Script found the solution after a few seconds but checked numbers long time after that... (Overall runtime: more than 5h...)

@@ -1,3 +1,5 @@
+-- Project Euler Problem 11
+-- Task: https://projecteuler.net/problem=11
 rowA = {08, 02, 22, 97, 38, 15, 00, 40, 00, 75, 04, 05, 07, 78, 52, 12, 50, 77, 91, 08}
 rowB = {49, 49, 99, 40, 17, 81, 18, 57, 60, 87, 17, 40, 98, 43, 69, 48, 04, 56, 62, 00}
 rowC = {81, 49, 31, 73, 55, 79, 14, 29, 93, 71, 40, 67, 53, 88, 30, 03, 49, 13, 36, 65}
@@ -19,31 +21,9 @@ rowR = {20, 69, 36, 41, 72, 30, 23, 88, 34, 62, 99, 69, 82, 67, 59, 85, 74, 04, 
 rowS = {20, 73, 35, 29, 78, 31, 90, 01, 74, 31, 49, 71, 48, 86, 81, 16, 23, 57, 05, 54}
 rowT = {01, 70, 54, 71, 83, 51, 54, 69, 16, 92, 33, 48, 61, 43, 52, 01, 89, 19, 67, 48}
 
+bigTable = {} table.insert(bigTable, rowA) table.insert(bigTable, rowB) table.insert(bigTable, rowC) table.insert(bigTable, rowD) table.insert(bigTable, rowE) table.insert(bigTable, rowF) table.insert(bigTable, rowG) table.insert(bigTable, rowH) table.insert(bigTable, rowI) table.insert(bigTable, rowJ) table.insert(bigTable, rowK) table.insert(bigTable, rowL) table.insert(bigTable, rowM) table.insert(bigTable, rowN) table.insert(bigTable, rowO) table.insert(bigTable, rowP) table.insert(bigTable, rowQ) table.insert(bigTable, rowR) table.insert(bigTable, rowS) table.insert(bigTable, rowT) 
 
-bigTable = {}
-table.insert(bigTable, rowA)
-table.insert(bigTable, rowB)
-table.insert(bigTable, rowC)
-table.insert(bigTable, rowD)
-table.insert(bigTable, rowE)
-table.insert(bigTable, rowF)
-table.insert(bigTable, rowG)
-table.insert(bigTable, rowH)
-table.insert(bigTable, rowI)
-table.insert(bigTable, rowJ)
-table.insert(bigTable, rowK)
-table.insert(bigTable, rowL)
-table.insert(bigTable, rowM)
-table.insert(bigTable, rowN)
-table.insert(bigTable, rowO)
-table.insert(bigTable, rowP)
-table.insert(bigTable, rowQ)
-table.insert(bigTable, rowR)
-table.insert(bigTable, rowS)
-table.insert(bigTable, rowT)
-
-
-
+-- HORIZONTAL
 function get4Horizontal(table, rangeStart)
 	product = table[rangeStart] -- The first value is the start value
 	rangeEnd = rangeStart + 3 -- End of range is 12 chars later on the 13nd char
@@ -56,7 +36,6 @@ end
 
 function getRowHorizontal(table)
 	highVal = 0
-	--endRange = #table - 4
 	for i=1, #table-4 do
 		if (get4Horizontal(table, i) > highVal) then
 			highVal = get4Horizontal(table, i)
@@ -77,62 +56,82 @@ function getAllHorizontal(table)
 	return highestOfEmAll
 end
 
+-- VERTICAL
 -- Maximum is 51267216
-function getAllVertical(table)
-	newTable = createVerticalTable(table)
-	return getAllHorizontal(newTable)
-end
-
-function createVerticalTable(inputTable)
+function getAllVertical()
 	newTable = {}
 	for y=1, 20 do
 		nini = {}
-		for k,n in pairs(inputTable) do
+		for k,n in pairs(bigTable) do
 			table.insert(nini, n[y])
 		end
 		table.insert(newTable, nini)
 	end
-	return newTable
-end
-
--- Maximum is PENDING
-function getAllDiagonal(table)
-	newTable = getDiagonalsRight(table)
 	return getAllHorizontal(newTable)
 end
 
-function getDiagonalsRight(inputTable)
-	highest = 0
-	for y = 2, 17 do
-		for m = 0, 16 do
-			product = inputTable[y][m+1]
-			for i=2, 4 do
-				product = product * inputTable[i-1][i+m]
-			end
-			if product > highest then
-				highest = product
-			end
+-- DIAGONAL
+function getRowValue(a, b, tabelle)
+	row = {}
+	for d = 0, 3 do
+		if a and b and type(tabelle[a + d])=='table' and tabelle[a + d][b + d] then
+			table.insert(row, tabelle[a + d][b + d])
 		end
 	end
-	print(highest)
-	return highest
+	value = row[1]
+	for a=2, #row do 
+		value = value * row[a]
+	end
+	return value
 end
 
-function main(table)
+-- Maximum is 40304286
+function diagonal(tabelle)
 	highestVal = 0
-	comparision = {getAllHorizontal(table), getAllVertical(table), getAllDiagonal(table)}
-	for i=1, #comparision do
-		if (comparision[i] > highestVal) then
-			highestVal = comparision[1]
+	for b = 1, 20 do
+		for a = 1, 20 do
+			if getRowValue(b, a, tabelle) then
+				if getRowValue(b, a, tabelle) > highestVal then
+					highestVal = getRowValue(b, a, tabelle)
+				end
+			end
 		end
 	end
 	return highestVal
 end
 
-print("Ergebnis: " .. getDiagonalsRight(bigTable))
--- print(main(bigTable))
+-- Maximum is 70600674
+function diagonalDownLeft()
+	newTable = {{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{}}
+	for i=1, #bigTable do
+		for j=20, 1, -1 do
+			table.insert(newTable[i], bigTable[i][j])
+		end
+	end
+	return diagonal(newTable)
+end
 
---[[
-	Notes:
-		- Not functional because of getDiagonalsRight
-]]--
+-- MAIN FUNCTION
+function main()
+	hoechstWert = 0
+	if getAllHorizontal(bigTable) > hoechstWert then
+		hoechstWert = getAllHorizontal(bigTable)
+	end
+	if getAllVertical() > hoechstWert then
+		hoechstWert = getAllVertical()
+	end
+	if diagonal(bigTable) > hoechstWert then
+		hoechstWert = diagonal(bigTable)
+	end
+	if diagonalDownLeft() > hoechstWert then
+		hoechstWert = diagonalDownLeft()
+	end
+	print("Highest value: " .. hoechstWert)
+	print("This programm took " .. os.clock() .. " seconds (" .. os.clock()/60 .. " minutes) for execution.")
+	return 0
+end
+
+main()
+
+-- Solution: 70600674 (correct)
+-- Runtime: 0.009 seconds
