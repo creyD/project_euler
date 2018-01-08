@@ -20,7 +20,7 @@ Problem 10 | :white_check_mark: | :x:
 Problem 11 | :white_check_mark: | :x:
 Problem 12 | :white_check_mark: | :x:
 Problem 13 | :white_check_mark: | :x:
-Problem 14 | :x: | :x:
+Problem 14 | :white_check_mark: | :x:
 Problem 15 | :x: | :x:
 Problem 16 | :white_check_mark: | :x:
 
