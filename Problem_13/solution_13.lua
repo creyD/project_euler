@@ -1,7 +1,7 @@
 -- Project Euler Problem 13
 -- Task: https://projecteuler.net/problem=13
 
-path = "PATH"
+path = "input.txt"
 
 file = io.open(path, "r") -- Open given file in read mode
 io.input(file)
