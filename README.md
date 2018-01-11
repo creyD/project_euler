@@ -5,7 +5,7 @@ This is just a simple storage for ideas and solutions for different problems of 
 
 ## Progress
 
-Task | creyD (Lua/ Python) | Katzenspucker (PHP) | SydMontague (C++)
+Task | [creyD](https://github.com/creyD) (Lua/ Python) | [Katzenspucker](https://github.com/Katzenspucker) (PHP) | [SydMontague](https://github.com/sydmontague) (C++)
 ------------ | ------------- | ------------- | -------------
 Problem 1 | :white_check_mark: | :white_check_mark: | :x:
 Problem 2 | :white_check_mark: | :white_check_mark: | :x:

@@ -1,12 +1,14 @@
 # Euler Project 16
-# Task: 2^15 = 32768 and the sum of its digits is 3 + 2 + 7 + 6 + 8 = 26.
-# What is the sum of the digits of the number 2^1000?
+# Source: https://projecteuler.net/problem=16
+import time
+start_time = time.time()
 
 a = str(2**1000)
-
 summe = 0
 for i in range(0, len(a)):
 	summe = summe + int(a[i])
 print(summe)
+print("The script took %s seconds for execution" % (time.time() - start_time))
 
 # Solution: 1366 (correct)
+# Runtime: <0.0 seconds

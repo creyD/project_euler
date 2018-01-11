@@ -20,4 +20,4 @@ print(getSumOfDigits(getFactorial(100)))
 print("The script took %s seconds for execution" % (time.time() - start_time))
 
 # Solution: 648 (correct)
-# Runtime: 0.0 seconds
+# Runtime: <0.0 seconds
