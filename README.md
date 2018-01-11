@@ -24,5 +24,8 @@ Problem 14 | :white_check_mark: | :x:
 Problem 15 | :white_check_mark: | :x:
 Problem 16 | :white_check_mark: | :x:
 Problem 17 | :white_check_mark: | :x:
+Problem 18 | :x: | :x:
+Problem 19 | :x: | :x:
+Problem 20 | :white_check_mark: | :x:
 
 ~
