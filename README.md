@@ -31,7 +31,7 @@ Problem 21 | :white_check_mark: | :x: | :x:
 Problem 22 | :white_check_mark: | :x: | :x:
 Problem 23 | :x: | :x: | :x:
 Problem 24 | :x: | :x: | :x:
-Problem 25 | :x: | :x: | :x:
+Problem 25 | :white_check_mark: | :x: | :x:
 Problem 26 | :x: | :x: | :x:
 Problem 27 | :x: | :x: | :x:
 Problem 28 | :x: | :x: | :x:

@@ -45,6 +45,6 @@ end
 -- All positive integers which cannot be written as the sum of two abundant numbers
 print(overallSum)
 print("This programm took " .. os.clock()*1000 .. " milliseconds (" .. os.clock() .. " seconds) for execution.")
--- Solution:
+-- Solution: 4179935 (false)
 -- Runtime:
--- Potentials/ Flaws: Way overcomplicated and taking too long...
+-- Potentials/ Flaws: Way overcomplicated and taking too long and overall not correct
