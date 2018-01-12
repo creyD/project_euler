@@ -25,8 +25,18 @@ Problem 15 | :white_check_mark: | :x: | :white_check_mark:
 Problem 16 | :white_check_mark: | :x: | :x:
 Problem 17 | :white_check_mark: | :x: | :x:
 Problem 18 | :white_check_mark: | :x: | :white_check_mark:
-Problem 19 | :x: | :x: | :x:
+Problem 19 | :white_check_mark: | :x: | :x:
 Problem 20 | :white_check_mark: | :x: | :x:
+Problem 21 | :x: | :x: | :x:
+Problem 22 | :x: | :x: | :x:
+Problem 23 | :x: | :x: | :x:
+Problem 24 | :x: | :x: | :x:
+Problem 25 | :x: | :x: | :x:
+Problem 26 | :x: | :x: | :x:
+Problem 27 | :x: | :x: | :x:
+Problem 28 | :x: | :x: | :x:
+Problem 29 | :x: | :x: | :x:
+Problem 30 | :x: | :x: | :x:
 Problem 67 | :white_check_mark: | :x: | :white_check_mark:
 
 ~
