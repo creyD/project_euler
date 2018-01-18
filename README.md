@@ -35,7 +35,7 @@ Problem 25 | :white_check_mark: | :x: | :x:
 Problem 26 | :x: | :x: | :x:
 Problem 27 | :x: | :x: | :x:
 Problem 28 | :x: | :x: | :x:
-Problem 29 | :x: | :x: | :x:
+Problem 29 | :white_check_mark: | :x: | :x:
 Problem 30 | :x: | :x: | :x:
 Problem 67 | :white_check_mark: | :x: | :white_check_mark:
 
