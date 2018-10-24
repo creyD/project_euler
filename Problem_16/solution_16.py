@@ -3,10 +3,10 @@
 import time
 start_time = time.time()
 
-a = str(2**1000)
-summe = 0
+a,summe = str(2**1000), 0
 for i in range(0, len(a)):
-	summe = summe + int(a[i])
+	summe += int(a[i])
+	
 print(summe)
 print("The script took %s seconds for execution" % (time.time() - start_time))
 

@@ -26,5 +26,5 @@ for i=1, 400 do
 end
 print("This programm took " .. os.clock() .. " seconds (" .. os.clock()/60 .. " minutes) for execution.")
 
--- Solution: 31875000
+-- Solution: 31875000 (correct)
 -- Runtime: 17.449 seconds (with print)/ 0.07 seconds (without print)

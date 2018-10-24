@@ -6,8 +6,8 @@ start_time = time.time()
 def getNext(prev1, prev2):
 	return prev1 + prev2
 
-fibonacci = [1,1]
-i = 3
+fibonacci, i = [1,1], 3
+
 while True:
 	value = getNext(fibonacci[len(fibonacci)-2], fibonacci[len(fibonacci)-1])
 	fibonacci.insert(i, value)
