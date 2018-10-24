@@ -5,7 +5,7 @@ import time
 start_time = time.time()
 
 def isPrime(number):
-	if number % 2 == 0 and number > 2:
+	if number % 2 == 0 and number >= 2:
 		return False
 	for i in range(3, int(number ** 0.5) + 1, 2):
 		if number % i == 0:
@@ -15,7 +15,7 @@ def isPrime(number):
 largestFactor, starting_number = 0, 600851475143
 
 for i in range(2, round(starting_number/2)):
-	if isPrime(i) and (starting_number % i == 0) and i > largestFactor:
+	if (starting_number % i == 0) and isPrime(i):
 		largestFactor = i
 
 print(i)
