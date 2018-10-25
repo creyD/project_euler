@@ -5,6 +5,7 @@ import time
 start_time = time.time()
 
 def isPrime(number):
+	# Take a shortcut if it is a even number
 	if number % 2 == 0 and number >= 2:
 		return False
 	for i in range(3, int(number ** 0.5) + 1, 2):
@@ -24,3 +25,4 @@ print("The script took %s seconds for execution" % (time.time() - start_time))
 
 # Solution: 6857 (Correct)
 # Runtime: 
+# Issues: After finding the result it takes forever to finish
