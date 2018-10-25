@@ -14,7 +14,7 @@ def isPrime(number):
 
 largestFactor, starting_number = 0, 600851475143
 
-for i in range(2, round(starting_number/2)):
+for i in range(2, round(starting_number/3)):
 	if (starting_number % i == 0) and isPrime(i):
 		largestFactor = i
 
